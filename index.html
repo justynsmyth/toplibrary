@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="meyer.css">
     <script src="java.js" defer></script>
     <title>Library</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="gridLayout">
+        <div class="top">
+            <div class="siteTitle">Library</div>
+            <button class="Login">Log in</button>
+        </div>
+        <div class="container">
+          <button id="test">Click to display</button>
+          <div class="cardArea"></div>
+          <button id="addBook">Add Book</button>
+          <dialog id="bookDialog">
+            <form method="dialog" id="myForm">
+                <label for="askAuthor">Author: </label>
+                <input type="text" name="bookAuthor" id="askAuthor" required>
+                <label for="asktitle">Title: </label>
+                <input type="text" name="booktitle" id="asktitle" required>
+                <label for="askpage">Pages: </label>
+                <input type="number" id="askpage" min="1" required>
+                <label for="asktitle">Progress: </label>
+                <select name="progress" id="askprogress" required>
+                    <option value="complete">Completed</option>
+                    <option value="in progress" selected>In Progress</option>
+                    <option value="pause">Paused</option>
+                    <option value="dropped">Dropped</option>
+                </select>
+                <div class="button-cont">
+                    <button value="cancel" formmethod="dialog" id="cancelBtn">Cancel</button>
+                    <button id="confirmBtn">Confirm</button>
+                </div>
+            </form>
+          </dialog>
+        </div>
+        <div class="footer">
+            <div class="copyright"></div>
+        </div>
+    </div>
+  </body>
 </html>

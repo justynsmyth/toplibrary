@@ -1,0 +1,124 @@
+:root {
+    --navPadding: 100px; // LEFT AND RIGHT
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+dialog {
+    border-radius: 4px;
+    border: none;
+    user-select: none;
+}
+
+
+.top > button {
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(189, 189, 189);
+    transform: scale(1.05);
+}
+
+.top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--navPadding) 20px var(--navPadding);
+    .siteTitle {
+        font-size: 5rem;
+    }
+    .Login {
+        font-size: 1rem;
+        align-self: center;
+        padding: 5px 20px 5px 20px;
+        // font-family:'Times New Roman', Times, serif;
+    }
+    border-bottom: gray solid thin;
+    box-shadow: 0 1px 2px gray;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 10px;
+    background-color: rgb(230, 230, 230);
+    padding: 30px 0 30px 0;
+    button {
+        border: none;
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+.cardArea {
+    display: flex;
+    flex-wrap: wrap;
+    // border: red solid thin;
+    gap: 10px;
+}
+
+#removeBook {
+    display: inline-block;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+    border: solid thin black;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    min-width: 200px;
+}
+
+#bookDialog::backdrop {
+    background-color: rgba($color: #aaaaaa, $alpha: 0.5);
+}
+
+#myForm {
+    display: grid;
+    grid-template-rows: repeat(autofill, minmax(50px, 1fr));
+    gap: 10px;
+
+    .button-cont {
+        grid-row: 9; /* The button container occupies the last row */
+        display: flex; /* Flex display for button alignment */
+        justify-content: space-between; /* Spread buttons evenly */
+    }
+}
+
+input:invalid {
+    border: red solid thin;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px 0 10px 0;
+    font-weight: 400;
+    border-top: gray solid thin;
+    box-shadow: 0 -1px 2px gray;
+}
+
+
+.removeBook {
+    background-color: rgb(245, 139, 139);
+}
